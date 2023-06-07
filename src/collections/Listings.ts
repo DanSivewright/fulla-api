@@ -30,6 +30,13 @@ const Listings: CollectionConfig = {
       required: true,
     },
     {
+      name: "highlights",
+      relationTo: "highlights",
+      hasMany: true,
+      type: "relationship",
+      required: true,
+    },
+    {
       name: "author",
       type: "relationship",
       relationTo: "users",
@@ -53,7 +60,7 @@ const Listings: CollectionConfig = {
     { name: "postalCode", type: "text", required: true },
     { name: "location", type: "point", label: "Location" },
     { name: "featureImage", type: "upload", relationTo: "media" },
-    { name: "featureImage", type: "upload", relationTo: "media" },
+    { name: "price", type: "number", required: true },
     {
       name: "images",
       label: "Images",
